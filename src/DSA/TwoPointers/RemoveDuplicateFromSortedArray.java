@@ -10,7 +10,7 @@ order they were present in nums initially. The remaining elements of nums are no
  as the size of nums. Return k.*/
 
 public class RemoveDuplicateFromSortedArray {
-    public int removeDuplicates(int[] nums) {
+    public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
 
         int i = 0; // slow pointer
@@ -21,6 +21,12 @@ public class RemoveDuplicateFromSortedArray {
             }
         }
         return i + 1; // number of unique elements
+    }
+
+    public static void main(String[] args) {
+        int nums[] = {0,1,2,2,3,3,3,4,4};
+        int result = removeDuplicates(nums);
+        System.out.println(result);
     }
 }
 
